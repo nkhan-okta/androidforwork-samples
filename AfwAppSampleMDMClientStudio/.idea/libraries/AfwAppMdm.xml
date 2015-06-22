@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AfwAppMdm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/AfwAppMdm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/nkhan/Downloads/AfwAppSampleMDMClientStudio/app/libs/AfwAppMdm.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="105b689e9d2296cd2ec1f2a029a48ea5bc6857f0">
+        <dex dex="/Users/nkhan/Downloads/AfwAppSampleMDMClientStudio/app/build/intermediates/pre-dexed/debug/AfwAppMdm-3bae2303f5bd4a3c280bd1814de305145d00e034.jar" />
+    </item>
+    <item
+        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/nkhan/Downloads/AfwAppSampleMDMClientStudio/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar" />
+    </item>
+
+</items>

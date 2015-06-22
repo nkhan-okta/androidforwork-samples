@@ -1,0 +1,7 @@
+/Users/nkhan/Downloads/BasicManagedProfile/Application/build/intermediates/classes/debug
+/Users/nkhan/Downloads/BasicManagedProfile/Application/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-09f38a703d490eda8899bc098dedbd275bb32578.jar
+/Users/nkhan/Downloads/BasicManagedProfile/Application/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-e965d389783da2df475e2993528f7a5e9b48af52.jar
+/Users/nkhan/Downloads/BasicManagedProfile/Application/build/intermediates/pre-dexed/debug/classes-6e0a6a60964d08bd99136d4030cc72f6c88d6231.jar
+/Users/nkhan/Downloads/BasicManagedProfile/Application/build/intermediates/pre-dexed/debug/classes-2a263b4558e12bea917baabf4da9f73f0050c507.jar
+/Users/nkhan/Downloads/BasicManagedProfile/Application/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-363f6b35141d3b16a7c9b596cefc50c8b674e1d7.jar
+/Users/nkhan/Downloads/BasicManagedProfile/Application/build/intermediates/pre-dexed/debug/classes-c2ba41673b0d9556da8d7cdc3cdf38423d5b453c.jar
