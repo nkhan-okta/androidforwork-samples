@@ -351,7 +351,7 @@ public class BasicManagedProfileFragment extends Fragment
         //
         // Username [Str] - optional (if specified in cert used for auth
         // Full EAS Username in any form accepted by the ActiveSync server.
-        // Typically this will be the full email address or DOMAIN\username.
+        // Typically this will be the full email address or DOMAIN\\username.
         //
         settings.putString("Username", "jdoe@nkhan.okta365test.org");
 
