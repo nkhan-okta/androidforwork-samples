@@ -143,6 +143,7 @@ public class BasicManagedProfileFragment extends Fragment
         // Bind event listeners and initial states
         view.findViewById(R.id.set_chrome_restrictions).setOnClickListener(this);
         view.findViewById(R.id.clear_chrome_restrictions).setOnClickListener(this);
+        view.findViewById(R.id.mailrestrict).setOnClickListener(this);
         view.findViewById(R.id.enable_forwarding).setOnClickListener(this);
         view.findViewById(R.id.disable_forwarding).setOnClickListener(this);
         view.findViewById(R.id.send_intent).setOnClickListener(this);
@@ -161,6 +162,10 @@ public class BasicManagedProfileFragment extends Fragment
         switch (view.getId()) {
             case R.id.set_chrome_restrictions: {
                 setChromeRestrictions();
+                break;
+            }
+            case R.id.mailrestrict: {
+                setDivideRestrictions();
                 break;
             }
             case R.id.clear_chrome_restrictions: {
@@ -309,6 +314,57 @@ public class BasicManagedProfileFragment extends Fragment
                     }
                 })
                 .show();
+    }
+
+
+    // Set restrictions to manage Divide Productivity app
+    private void setDivideRestrictions() {
+        String PACKAGE_NAME_DIVIDE_PRODUCTIVIY = "com.google.android.apps.work.pim";
+        final Activity activity = getActivity();
+        if (null == activity) {
+            return;
+        }
+        final DevicePolicyManager manager =
+                (DevicePolicyManager) activity.getSystemService(Context.DEVICE_POLICY_SERVICE);
+        final Bundle settings = new Bundle();
+
+        //
+        // EmailAddress [Str] - required
+        // Email address.
+        //
+        settings.putString("EmailAddress", "");
+
+        // Host [Str] - required
+        // Email host, full string including optional port e.g. server.corp.acme.com:443. Port defaults
+        // to 443 if omitted. Path is optional and will default to an empty string for Exchange
+        // environments and ‘/servlet/traveler’ in Lotus environments. See ServerType parameter for
+        // details on how to set the server type.
+        //
+        settings.putString("Host", "1");
+
+        //
+        // ServerType [Enum {Exchange, Lotus}] - optional (default: Exchange)
+        // Enum offering choice between Exchange, Lotus.
+        //
+        settings.putString("ServerType", "Exchange");
+
+        //
+        // Username [Str] - optional (if specified in cert used for auth
+        // Full EAS Username in any form accepted by the ActiveSync server.
+        // Typically this will be the full email address or DOMAIN\username.
+        //
+        settings.putString("Username", "jdoe@nkhan.okta365test.org");
+
+        //
+        // Password [Str] - optional
+        // EAS password. User will be prompted if server requires password auth.
+        //
+        settings.putString("Password", "Okta123$");
+
+
+        manager.setApplicationRestrictions
+                (BasicDeviceAdminReceiver.getComponentName(activity),
+                        PACKAGE_NAME_DIVIDE_PRODUCTIVIY, settings);
     }
 
     /**

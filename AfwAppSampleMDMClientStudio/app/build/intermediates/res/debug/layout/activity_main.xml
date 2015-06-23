@@ -26,4 +26,11 @@
         android:layout_height="wrap_content"
         android:text="@string/provision" />
 
-</LinearLayout><!-- From: file:/Users/nkhan/Downloads/AfwAppSampleMDMClientStudio/app/src/main/res/layout/activity_main.xml -->
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Whitelist Divide"
+        android:id="@+id/btnWhiteList" />
+
+</LinearLayout><!-- From: file:/Users/nkhan/androidforwork-samples/AfwAppSampleMDMClientStudio/app/src/main/res/layout/activity_main.xml -->

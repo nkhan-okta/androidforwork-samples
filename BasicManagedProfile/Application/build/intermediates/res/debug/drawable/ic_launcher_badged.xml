@@ -23,4 +23,4 @@
         android:bottom="8dp"
         android:drawable="@drawable/badge"/>
 </layer-list>
-<!-- From: file:/Users/nkhan/Downloads/BasicManagedProfile/Application/src/main/res/drawable/ic_launcher_badged.xml -->
+<!-- From: file:/Users/nkhan/androidforwork-samples/BasicManagedProfile/Application/src/main/res/drawable/ic_launcher_badged.xml -->

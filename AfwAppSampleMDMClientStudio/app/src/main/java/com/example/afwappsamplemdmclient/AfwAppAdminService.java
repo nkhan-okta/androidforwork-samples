@@ -13,6 +13,8 @@ public class AfwAppAdminService extends IntentService {
     public static final String CONNECT_AFWAPP = "connect";
     public static final String PROVISION_AFWAPP = "provision";
     public static final String FINISH_AFWAPP = "finish";
+    private static final String USERNAME = "nkhan@okta1.com";
+    private static final String PASSWORD = "Okta123$";
 
     private AfwAppPolicyManager mAfwAppPolicyManager;
 
@@ -38,8 +40,8 @@ public class AfwAppAdminService extends IntentService {
         }
         if (action.equals(PROVISION_AFWAPP)) {
             Bundle options = new Bundle();
-            options.putString("username", "nkhan@okta1.com");
-            options.putString("password", "Okta123$");
+            options.putString("username", USERNAME);
+            options.putString("password", PASSWORD);
             try {
                 mAfwAppPolicyManager.startProvisioning(
                         getBaseContext().getPackageName(), 
@@ -58,5 +60,7 @@ public class AfwAppAdminService extends IntentService {
             }
         }
     }
+
+
 
 }

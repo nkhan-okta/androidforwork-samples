@@ -69,6 +69,12 @@
         <!-- Intent Forwarding -->
 
         <Button
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:text="SET MAIL RESTRICTIONS"
+            android:id="@+id/mailrestrict" />
+
+        <Button
             android:id="@+id/enable_forwarding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -27,4 +27,4 @@
         <disable-keyguard-features/>
     </uses-policies>
 </device-admin>
-<!-- From: file:/Users/nkhan/Downloads/BasicManagedProfile/Application/src/main/res/xml/basic_device_admin_receiver.xml -->
+<!-- From: file:/Users/nkhan/androidforwork-samples/BasicManagedProfile/Application/src/main/res/xml/basic_device_admin_receiver.xml -->

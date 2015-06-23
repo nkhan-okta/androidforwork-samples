@@ -1,5 +1,8 @@
 package com.example.afwappsamplemdmclient;
 
+import android.afw.app.admin.AfwAppEnterpriseAppInfo;
+import android.afw.app.admin.AfwAppManagerException;
+import android.afw.app.admin.AfwAppPolicyManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
+    private AfwAppPolicyManager mAfwAppPolicyManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,14 @@ public class MainActivity extends Activity {
                 mContext.startService(mdmConnected);
             }
         });
+
+        Button mWhitelist = (Button) findViewById(R.id.btnWhiteList);
+        mWhitelist.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                whiteListDivideForProductivity(getApplicationContext());
+            }
+        });
     }
 
 
@@ -59,4 +71,19 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    private void whiteListDivideForProductivity(Context context) {
+        mAfwAppPolicyManager =
+                AfwAppPolicyManager.getInstance(getApplicationContext());
+        final String samplePkgName = "com.google.android.apps.work.pim";
+        final String sampleSig = "jk3902n3ng43oug3ngerwlknfb09enqber";
+        AfwAppEnterpriseAppInfo sampleAppInfo = new AfwAppEnterpriseAppInfo(samplePkgName, sampleSig.getBytes());
+        AfwAppEnterpriseAppInfo[] infos =
+                new AfwAppEnterpriseAppInfo[] { sampleAppInfo };
+        try {	mAfwAppPolicyManager.addEnterpriseAppSignatureToWhitelist(infos);
+        } catch (AfwAppManagerException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
